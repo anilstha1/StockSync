@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\stock_management_system">
+      <UniqueIdentifier>{7ba7f8c0-a42a-4892-b5e4-494dabce3c60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\order_management_system">
+      <UniqueIdentifier>{a634eecb-4bfc-45d7-af11-b2f62aa6854b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\stock_management_system">
+      <UniqueIdentifier>{45fa3adf-e213-41d2-a70c-421cdb83a642}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\order_management_system">
+      <UniqueIdentifier>{77cb56d1-e132-4297-ad80-ca8daba228d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\supply_management_system">
+      <UniqueIdentifier>{b6057466-2b8d-4833-874a-453a7a236694}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\supply_management_system">
+      <UniqueIdentifier>{293604fc-cb6b-4d5e-81df-f2793aadc5ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\LoginPage">
+      <UniqueIdentifier>{0d4920ca-9f19-4074-8d80-254258bc9c2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\LoginPage">
+      <UniqueIdentifier>{7b066791-e79e-426b-8ac2-f5378e987b22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\bcrypt">
+      <UniqueIdentifier>{9083bb01-c41b-484f-a586-751b36651f4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\bcrypt">
+      <UniqueIdentifier>{37159850-fca8-49b3-a8ef-7abc1555cb9b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ClientFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AdminFrame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SupplierWin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="order_management_system\Order.h">
+      <Filter>Header Files\order_management_system</Filter>
+    </ClInclude>
+    <ClInclude Include="order_management_system\OrderManagement.h">
+      <Filter>Header Files\order_management_system</Filter>
+    </ClInclude>
+    <ClInclude Include="stock_management_system\Warehouse.h">
+      <Filter>Header Files\stock_management_system</Filter>
+    </ClInclude>
+    <ClInclude Include="stock_management_system\WarehouseItem.h">
+      <Filter>Header Files\stock_management_system</Filter>
+    </ClInclude>
+    <ClInclude Include="supply_management_system\Supply.h">
+      <Filter>Header Files\supply_management_system</Filter>
+    </ClInclude>
+    <ClInclude Include="supply_management_system\SupplyManagement.h">
+      <Filter>Header Files\supply_management_system</Filter>
+    </ClInclude>
+    <ClInclude Include="loginPage\main.h">
+      <Filter>Header Files\LoginPage</Filter>
+    </ClInclude>
+    <ClInclude Include="loginPage\SignupFrame.h">
+      <Filter>Header Files\LoginPage</Filter>
+    </ClInclude>
+    <ClInclude Include="loginPage\LoginFrame.h">
+      <Filter>Header Files\LoginPage</Filter>
+    </ClInclude>
+    <ClInclude Include="loginPage\MainApp.h">
+      <Filter>Header Files\LoginPage</Filter>
+    </ClInclude>
+    <ClInclude Include="bcrypt\bcrypt.h">
+      <Filter>Header Files\bcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="bcrypt\node_blf.h">
+      <Filter>Header Files\bcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="bcrypt\openbsd.h">
+      <Filter>Header Files\bcrypt</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ClientFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AdminFrame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SupplierWin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stock_management_system\Warehouse.cpp">
+      <Filter>Source Files\stock_management_system</Filter>
+    </ClCompile>
+    <ClCompile Include="stock_management_system\WarehouseItem.cpp">
+      <Filter>Source Files\stock_management_system</Filter>
+    </ClCompile>
+    <ClCompile Include="order_management_system\Order.cpp">
+      <Filter>Source Files\order_management_system</Filter>
+    </ClCompile>
+    <ClCompile Include="order_management_system\OrderManagement.cpp">
+      <Filter>Source Files\order_management_system</Filter>
+    </ClCompile>
+    <ClCompile Include="supply_management_system\SupplyManagement.cpp">
+      <Filter>Source Files\supply_management_system</Filter>
+    </ClCompile>
+    <ClCompile Include="supply_management_system\Supply.cpp">
+      <Filter>Source Files\supply_management_system</Filter>
+    </ClCompile>
+    <ClCompile Include="loginPage\main.cpp">
+      <Filter>Source Files\LoginPage</Filter>
+    </ClCompile>
+    <ClCompile Include="loginPage\LoginFrame.cpp">
+      <Filter>Source Files\LoginPage</Filter>
+    </ClCompile>
+    <ClCompile Include="loginPage\MainApp.cpp">
+      <Filter>Source Files\LoginPage</Filter>
+    </ClCompile>
+    <ClCompile Include="loginPage\SignupFrame.cpp">
+      <Filter>Source Files\LoginPage</Filter>
+    </ClCompile>
+    <ClCompile Include="bcrypt\bcrypt.cpp">
+      <Filter>Source Files\bcrypt</Filter>
+    </ClCompile>
+    <ClCompile Include="bcrypt\blowfish.cpp">
+      <Filter>Source Files\bcrypt</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="util.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
