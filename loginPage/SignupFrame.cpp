@@ -27,6 +27,8 @@ SignupFrame::SignupFrame(const wxString &title) : wxFrame(nullptr, wxID_ANY, tit
 
 	submitButton->Bind(wxEVT_BUTTON, &SignupFrame::OnSubmitButtonClicked, this);
 	loginButton->Bind(wxEVT_BUTTON, &SignupFrame::OnLoginButtonClicked, this);
+
+	CreateStatusBar();
 }
 
 void SignupFrame::OnSubmitButtonClicked(wxCommandEvent &evt)
@@ -74,11 +76,6 @@ void SignupFrame::OnSubmitButtonClicked(wxCommandEvent &evt)
 				User s1(Name, Address, UserRole, Username, Password);
 				s1.AddUser();
 				wxMessageBox("signup successfully", "Login Info", wxOK | wxICON_INFORMATION);
-				Close();
-				LoginFrame* loginFrame = new LoginFrame("StockSync");
-				loginFrame->SetClientSize(800, 800);
-				loginFrame->Center();
-				loginFrame->Show();
 			}
 			else
 			{
@@ -95,7 +92,7 @@ void SignupFrame::OnSubmitButtonClicked(wxCommandEvent &evt)
 		wxMessageBox("please fill all the form", "Login Info", wxOK | wxICON_INFORMATION);
 	}
 
-
+	wxLogStatus(username);
 }
 void SignupFrame::OnLoginButtonClicked(wxCommandEvent &evt)
 {

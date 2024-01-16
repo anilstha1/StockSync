@@ -202,10 +202,6 @@ void ClientFrame::OnProductChoiceSelected(wxCommandEvent& event) {
 	wxString selectedText = event.GetString();
 	std::string selectedChoice = selectedText.ToStdString();
 
-	int quantity = spinCtrl->GetValue();
-	totalPrice = rate * quantity;
-	wxString displaytext = wxString::Format("Total Price: %ld", totalPrice);
-	staticText->SetLabel(displaytext);
 	for (long int supplyId = 0; supplyId < Supply::supply_count; supplyId++) {
 		Supply supply = Supply::read_supply_file(supplyId);
 		if (supply.category == selectedChoice) {
@@ -226,41 +222,15 @@ void ClientFrame::OnButtonClicked(wxCommandEvent& evt)
 	//Convert wxString values to std::string
 	std::string stdProductName = std::string(productName.mb_str());
 
+	OrderManagement order_management;
+	order_management.place_order(u2.GetName(), stdProductName, quantity,rate,totalPrice);
 
 
-	int remainingInStock = 0;
-	int orderCount = 0;
-	int totalstock = 0;
-	for (long int supplyId = 0; supplyId < Supply::supply_count; ++supplyId) {
-		Supply supply = Supply::read_supply_file(supplyId);
-		if (supply.get_supply_id() != -1 && supply.product_name == stdProductName) {
-			totalstock += supply.quantity;
-		}
-	}
-			// Search for the product name in the orders and update orderCount
-	for (long int orderId = 0; orderId < Order::order_count; ++orderId) {
-		Order order = Order::read_order_file(orderId);
-		if (order.get_order_id() != -1 && order.product_name == stdProductName) {
-			orderCount += order.quantity;
-		}
-	}
-			
-remainingInStock = totalstock - orderCount;
-	if (remainingInStock >= quantity) {
-		if (quantity != 0) {
-			OrderManagement order_management;
-			order_management.place_order(u2.GetName(), stdProductName, quantity, rate, totalPrice);
-			wxLogMessage("Order placed successfully!");
-		}
-		else {
-			wxLogMessage("order quantity should be more than 0");
-		}
-	}
-	else {
-		wxLogMessage("insufficient quantity");
-	}
+	//To read the order details back and display them
+	Order order1 = order_management.read_order_file(0);
 
-	
+
+	wxLogMessage("Order placed successfully!");
 	////for debugging
 	//wxLogMessage("Customer: %s, Product: %s, Quantity: %d", customerName, productName, quantity);
 }
